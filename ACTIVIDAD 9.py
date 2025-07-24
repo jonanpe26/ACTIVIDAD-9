@@ -41,4 +41,5 @@ print("listado de clientes y destinos")
 for codigo, info in cliente.items():
     print(f"Codigo:{codigo}")
     print(f"Nombre{info["nombre"]}")
+    #buscar como imprimir destinos
 
