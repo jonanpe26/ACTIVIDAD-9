@@ -3,8 +3,8 @@ cliente={}
 def lugares(clientes):
     if len(clientes)==0:
         return 0
-    cliente=clientes[0]
-    return len(clientes[cliente]["destinos"])+lugares(clientes[1:])
+    cliente0=clientes[0]
+    return len(cliente[cliente0]["destinos"])+lugares(clientes[1:])
 
 def maximo(clientes):
     max=-1
@@ -33,7 +33,12 @@ destinos=[]
 for j in range(visitas):
     destino=input(f"destino{j+1}")
     destinos.append(destino)
-clientes[codigo]={
+cliente[codigo]={
         "nombre": nombre,
         "destinos": destinos
     }
+print("listado de clientes y destinos")
+for codigo, info in cliente.items():
+    print(f"Codigo:{codigo}")
+    print(f"Nombre{info["nombre"]}")
+
